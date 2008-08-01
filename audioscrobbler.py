@@ -760,8 +760,7 @@ class AudioScrobblerPost:
             number = len(self.cache)
         
         params = {}
-        count = 0
-        for track in self.cache[:number]:
+        for count, track in enumerate(self.cache[:number]):
             for k in track.keys():
                 params[k % (count,)] = track[k]
         
