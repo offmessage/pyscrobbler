@@ -261,6 +261,8 @@ Example query script
 Document use of the factory class
     AudioScrobbler
     
+Add a license and copyright section
+
 """
 
 __author__ = "Andy Theyers <andy@isotoma.com>"
@@ -453,15 +455,15 @@ class AudioScrobblerQuery:
         self.param = str(kwargs[self.type])
         self.baseurl = 'http://%s/%s/%s/%s' % (host, 
                                                version, 
-                                               urllib.quote(self.type), 
-                                               urllib.quote(self.param), 
+                                               urllib.quote(self.type, safe=""), 
+                                               urllib.quote(self.param, safe=""), 
                                               )
         self._cache = {}
         
     def __getattr__(self, name):
         def method(_self=self, name=name, **params):
             # Build the URL
-            url = '%s/%s.xml' % (_self.baseurl, urllib.quote(name))
+            url = '%s/%s.xml' % (_self.baseurl, urllib.quote(name, safe=""))
             if len(params) != 0:
                 for key in params.keys():
                     # This little mess is required to get round the fact that
@@ -841,3 +843,4 @@ class AudioScrobblerPost:
             self.loglines = []
             return retval
         return self.loglines
+    
