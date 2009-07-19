@@ -1,0 +1,27 @@
+===============
+PyScrobbler 1.0
+===============
+
+General information
+-------------------
+
+This version of pyscrobbler is designed to use the 1.0 query protocol and the
+1.1 submission protocol.  Both of these protocols have been superceded (version
+2.0 and 1.2.1, respectively).  This version will continue to be maintained
+until a new version has been written to support the new APIs.
+
+Installation requirements
+-------------------------
+
+This code will work with any Python 2.x from 2.3 and up.  I've not even begun
+to think about Python 3.  It might work with earlier python versions, but I'm
+unable to test.
+
+If you are using python 2.3 or 2.4 you will need to install the elementtree
+package separately in order for this code to work.
+
+The project is hosted at http://code.google.com/p/pyscrobbler
+
+Additional maintainers are always welcome.
+
+andy@isotoma.com
