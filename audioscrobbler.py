@@ -180,7 +180,7 @@ Basic usage
                  album="At War With The Mystics",
                  mbid=""
                 )
->>> post = AudioScrobblerPost(user='offmessage', password='mypasswd')
+>>> post = AudioScrobblerPost(username='offmessage', password='mypasswd')
 >>> post(**track)
 >>> 
 
