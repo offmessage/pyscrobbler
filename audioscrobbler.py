@@ -290,7 +290,7 @@ if enc == 'ascii' and locale.getpreferredencoding():
     enc = locale.getpreferredencoding()
 # if we are on MacOSX, we default to UTF8
 # because apples python reports 'ISO8859-1' as locale, but MacOSX uses utf8
-if sys.platform=='darwin':
+if sys.platform == 'darwin' or sys.platform == 'symbian_s60':
     enc = 'utf8'
 
 # AudioScrobblerQuery configuration settings
