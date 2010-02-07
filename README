@@ -20,8 +20,9 @@ unable to test.
 If you are using python 2.3 or 2.4 you will need to install the elementtree
 package separately in order for this code to work.
 
-The project is hosted at http://code.google.com/p/pyscrobbler
+The project has moved and is now hosted at 
+http://github.com/offmessage/pyscrobbler
 
 Additional maintainers are always welcome.
 
-andy@isotoma.com
+andy.theyers@isotoma.com
